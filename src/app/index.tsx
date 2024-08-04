@@ -1,6 +1,6 @@
-import './App.css'
 import Button from '@mui/material/Button';
 
+import './styles/index.pcss'
 
 function App() {
   return (
