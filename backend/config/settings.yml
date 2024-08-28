@@ -1,0 +1,7 @@
+rails:
+  host: localhost
+  log_to_stdout: true
+  min_threads: 10
+  max_threads: 10
+  port: <%= ENV.fetch('BACKEND_PORT_EXTERNAL') %>
+  protocol: http
