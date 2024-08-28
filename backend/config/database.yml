@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= Settings.rails.max_threads %>
+  host: db
+  username: <%= ENV.fetch('POSTGRES_USER') %>
+  password: <%= ENV.fetch('POSTGRES_PASSWORD') %> 
+
+development:
+  postgres:
+    <<: *default
+    database: icebreaker_talk_development
+
+test:
+  postgres:
+    <<: *default
+    database: icebreaker_talk_test<%= ENV['TEST_ENV_NUMBER'] %>
+
+production:
+  postgres:
+    <<: *default
+    database: icebreaker_talk_production
