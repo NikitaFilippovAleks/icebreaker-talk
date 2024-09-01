@@ -1,0 +1,24 @@
+{
+  "name": "Client",
+  "dockerComposeFile": ["../../docker-compose.yml", "../../docker-compose.override.development.yml"],
+  "service": "client",
+  "workspaceFolder": "/app",
+  "shutdownAction": "stopCompose",
+  // "initializeCommand": "ssh-add ~/.ssh/id_rsa",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "streetsidesoftware.code-spell-checker",
+        "naumovs.color-highlight",
+        "mikestead.dotenv",
+        "dbaeumer.vscode-eslint",
+        "eamodio.gitlens",
+        "firsttris.vscode-jest-runner",
+        "vunguyentuan.vscode-postcss",
+        "esbenp.prettier-vscode",
+        "stylelint.vscode-stylelint",
+        "bradlc.vscode-tailwindcss"
+      ]
+    }
+  }
+}

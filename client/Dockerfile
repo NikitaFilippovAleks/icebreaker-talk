@@ -1,9 +1,9 @@
-FROM node:20-alpine
+FROM node:20
 
 WORKDIR /app
 
-COPY package.json yarn.lock ./
+COPY ./client/package.json ./client/yarn.lock ./client/
 
-RUN yarn install --check-files
+RUN cd client && yarn install --check-files
 
 COPY . .

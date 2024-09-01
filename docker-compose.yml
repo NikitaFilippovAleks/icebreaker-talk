@@ -1,18 +1,22 @@
 services:
   client:
-    build: ./client
+    build: 
+      dockerfile: ./client/Dockerfile
+      context: .
     command: sleep infinity
     ports:
       - 3100:3100
-    develop:
-      watch:
-        - action: sync
-          path: ./client
-          target: /app
-          ignore:
-            - node_modules
+    # develop:
+    #   watch:
+    #     - action: sync
+    #       path: ./client
+    #       target: /app
+    #       ignore:
+    #         - node_modules
   backend:
-    build: ./backend
+    build: 
+      dockerfile: ./backend/Dockerfile
+      context: .
     command: sleep infinity
     restart: always
     ports:
