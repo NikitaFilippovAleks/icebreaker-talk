@@ -1,7 +1,7 @@
 services:
   backend:
     volumes:
-      - ./backend:/app:cached
+      - .:/app:cached
   db:
     ports:
       - 5432:5432

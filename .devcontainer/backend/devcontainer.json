@@ -1,0 +1,36 @@
+{
+  "name": "Backend",
+  "dockerComposeFile": ["../../docker-compose.yml", "../../docker-compose.override.development.yml"],
+  "service": "backend",
+  "workspaceFolder": "/app",
+  "shutdownAction": "stopCompose",
+  // "initializeCommand": "ssh-add ~/.ssh/id_rsa",
+  "customizations": {
+    "ruby": {
+      "editor.insertSpaces": true,
+      "editor.tabSize": 2
+    },
+    "vscode": {
+      "extensions": [
+        "koichisasada.vscode-rdbg",
+        "castwide.solargraph",
+        "misogi.ruby-rubocop",
+        "hoovercj.ruby-linter",
+        "miguel-savignano.ruby-symbols",
+        "SarahRidge.vscode-ruby-syntax",
+        "kaiwood.endwise",
+        "cweijan.vscode-database-client2",
+        "naumovs.color-highlight",
+        "mikestead.dotenv",
+        "eamodio.gitlens",
+        "wayou.vscode-todo-highlight"
+      ],
+      "settings": {
+        "solargraph.commandPath": "/usr/local/bundle/bin/solargraph",
+        "solargraph.bundlerPath": "/usr/local/bin/bundle",
+        "ruby.rubocop.executePath": "/usr/local/bundle/bin/",
+        "ruby.linter.executablePath": "/usr/local/bundle/bin/"
+      }
+    }
+  }
+}
