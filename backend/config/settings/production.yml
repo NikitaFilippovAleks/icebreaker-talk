@@ -1,0 +1,5 @@
+rails:
+  port: 443
+  protocol: https
+  serve_static_files: false
+  rswag_enabled: false

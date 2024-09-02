@@ -5,3 +5,5 @@ rails:
   max_threads: 10
   port: <%= ENV.fetch('BACKEND_PORT_EXTERNAL') %>
   protocol: http
+  rswag_enabled: true
+  rswag_ui_path: api-docs
