@@ -29,6 +29,7 @@
         "solargraph.commandPath": "/usr/local/bundle/bin/solargraph",
         "solargraph.bundlerPath": "/usr/local/bin/bundle",
         "ruby.rubocop.executePath": "/usr/local/bundle/bin/",
+        "ruby.rubocop.configFilePath": "./backend/.rubocop.yml",
         "ruby.linter.executablePath": "/usr/local/bundle/bin/"
       }
     }
