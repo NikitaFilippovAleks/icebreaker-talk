@@ -11,8 +11,17 @@ end
 #
 # Table name: questions
 #
-#  id         :bigint           not null, primary key
-#  text       :text
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id            :bigint           not null, primary key
+#  text          :text
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  collection_id :bigint           not null
+#
+# Indexes
+#
+#  index_questions_on_collection_id  (collection_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (collection_id => collections.id)
 #

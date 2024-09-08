@@ -13,58 +13,67 @@ RSpec.describe Question do
   end
 
   # Question object creation
-  # describe '.new' do
-  #   subject { Question.new(attributes) }
+  describe '.new' do
+    subject { Question.new(attributes) }
 
-  #   let(:attributes) { attributes_for(:question, params) }
-  #   let(:params) { nil }
+    let(:attributes) { attributes_for(:question, params) }
+    let(:params) { nil }
 
-  #   context 'with valid params' do
-  #     it { is_expected.to be_valid }
-  #   end
+    context 'with valid params' do
+      it { is_expected.to be_valid }
+    end
 
-  #   context 'with invalid params' do
-  #     context 'when text' do
-  #       context 'with empty value' do
-  #         let(:params) { { text: '' } }
+    context 'with invalid params' do
+      context 'when text' do
+        context 'with empty value' do
+          let(:params) { { text: '' } }
 
-  #         it do
-  #           is_expected.to has_only_errors_keys(:text)
-  #           is_expected.to has_validation_errors(:text, 'не может быть пустым')
-  #         end
-  #       end
+          it do
+            is_expected.to has_only_errors_keys(:text)
+            is_expected.to has_validation_errors(:text, 'не может быть пустым')
+          end
+        end
 
-  #       context 'with nil value' do
-  #         let(:params) { { text: nil } }
+        context 'with nil value' do
+          let(:params) { { text: nil } }
 
-  #         it do
-  #           is_expected.to has_only_errors_keys(:text)
-  #           is_expected.to has_validation_errors(:text, 'не может быть пустым')
-  #         end
-  #       end
-  #     end
-  #   end
-  # end
+          it do
+            is_expected.to has_only_errors_keys(:text)
+            is_expected.to has_validation_errors(:text, 'не может быть пустым')
+          end
+        end
+      end
+    end
+  end
 
-  # # Question record creation
-  # describe '.create' do
-  #   subject { Question.find_by(text: attributes[:name]) }
+  # Question record creation
+  describe '.create' do
+    subject { Question.find_by(text: attributes[:text]) }
 
-  #   let(:attributes) { attributes_for(:question, params) }
-  #   let(:params) { nil }
+    let(:attributes) { attributes_for(:question, params) }
+    let(:params) { nil }
 
-  #   before { Question.create(attributes) }
+    before { Question.create(attributes) }
 
-  #   it { is_expected.to be_valid }
-  # end
+    it { is_expected.to be_valid }
+  end
 end
 
 # == Schema Information
 #
 # Table name: questions
 #
-#  id         :bigint           not null, primary key
-#  text       :text
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id            :bigint           not null, primary key
+#  text          :text
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  collection_id :bigint           not null
+#
+# Indexes
+#
+#  index_questions_on_collection_id  (collection_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (collection_id => collections.id)
 #
