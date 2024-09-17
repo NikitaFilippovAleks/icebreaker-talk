@@ -12,11 +12,11 @@ end
 #
 # Table name: questions
 #
-#  id            :bigint           not null, primary key
+#  id            :uuid             not null, primary key
 #  text          :text
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
-#  collection_id :bigint           not null
+#  collection_id :uuid             not null
 #
 # Indexes
 #

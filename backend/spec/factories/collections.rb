@@ -16,7 +16,7 @@ end
 #
 # Table name: collections
 #
-#  id          :bigint           not null, primary key
+#  id          :uuid             not null, primary key
 #  color       :string
 #  description :text
 #  name        :string

@@ -22,7 +22,7 @@ module Api
       def index
         @collections = Collection.all
 
-        render json: @collections
+        render json: json_presented(@collections, 'collections', 'main')
       end
     end
   end
