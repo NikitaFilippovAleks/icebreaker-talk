@@ -84,6 +84,7 @@ GEM
     bootsnap (1.18.4)
       msgpack (~> 1.2)
     builder (3.3.0)
+    byebug (11.1.3)
     concurrent-ruby (1.3.4)
     config (5.5.1)
       deep_merge (~> 1.2, >= 1.2.1)
@@ -163,6 +164,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.7-x86_64-linux)
       racc (~> 1.4)
+    pagy (9.0.9)
     parallel (1.26.3)
     parallel_tests (4.7.1)
       parallel
@@ -348,11 +350,13 @@ PLATFORMS
 DEPENDENCIES
   annotate
   bootsnap
+  byebug
   config
   factory_bot_rails
   faker
   json_tagged_logger
   lograge
+  pagy
   parallel_tests
   pg (~> 1.1)
   puma (>= 5.0)

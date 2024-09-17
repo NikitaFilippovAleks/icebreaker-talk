@@ -39,3 +39,4 @@ config/environments/*.local.yml
 swagger
 coverage
 junit
+.byebug_history
