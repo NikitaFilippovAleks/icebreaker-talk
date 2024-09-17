@@ -5,6 +5,10 @@ FactoryBot.define do
     name { Faker::Book.title }
     description { Faker::Lorem.paragraph }
     color { Faker::Color.hex_color }
+
+    after(:create) do |collection|
+      create_list(:question, 3, collection:)
+    end
   end
 end
 
