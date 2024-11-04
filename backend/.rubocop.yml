@@ -13,41 +13,82 @@ AllCops:
     - 'db/seeds.rb'
     - 'lib/tasks/auto_annotate_models.rake'
 
-Style/AsciiComments:
-  Enabled: false
-
 Layout/LineLength:
   Max: 120
   Exclude:
     - '**/spec/**/*.rb'
+    - 'db/migrate/**/*'
 
 Metrics/BlockLength:
   Exclude:
     - '**/spec/**/*.rb'
     - 'config/environments/*.rb'
     - 'lib/tasks/auto_annotate_models.rake'
+  CountAsOne:
+    - array
+    - heredoc
+    - method_call
 
 Metrics/MethodLength:
   Max: 20
   Exclude:
     - '**/spec/**/*.rb'
+    - 'db/migrate/**/*'
+  CountAsOne:
+    - array
+    - heredoc
+    - method_call
 
 Metrics/ClassLength:
   Max: 150
   Exclude:
     - '**/spec/**/*.rb'
+  CountAsOne:
+    - array
+    - heredoc
+    - method_call
+
+Metrics/ModuleLength:
+  CountAsOne:
+    - array
+    - heredoc
+    - method_call
 
 Metrics/AbcSize:
   Max: 20
   Exclude:
     - '**/spec/**/*.rb'
+    - 'db/migrate/**/*'
 
-Lint/MissingCopEnableDirective:
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+RSpec/DescribedClass:
+  EnforcedStyle: explicit
+RSpec/EmptyExampleGroup:
   Exclude:
-   - 'config/routes.rb'
+    - 'spec/requests/**/*'
+RSpec/ExampleLength:
+  Enabled: false
+RSpec/ImplicitSubject:
+  EnforcedStyle: require_implicit
+RSpecRails/InferredSpecType:
+  Enabled: false
+RSpec/LetSetup:
+  Enabled: false
+RSpec/MultipleExpectations:
+  Enabled: false
+RSpec/MultipleMemoizedHelpers:
+  Max: 10
+RSpec/NestedGroups:
+  Enabled: false
+RSpec/VariableName:
+  AllowedPatterns:
+    - ^access-token
 
 Gemspec/DeprecatedAttributeAssignment: # new in 1.10
   Enabled: true
+
 Layout/LineEndStringConcatenationIndentation: # new in 1.18
   Enabled: true
 Layout/SpaceBeforeBrackets: # new in 1.7
@@ -74,6 +115,9 @@ Lint/IncompatibleIoSelectWithFiberScheduler: # new in 1.21
   Enabled: true
 Lint/LambdaWithoutLiteralBlock: # new in 1.8
   Enabled: true
+Lint/MissingCopEnableDirective:
+  Exclude:
+   - 'config/routes.rb'
 Lint/NoReturnInBeginEndBlocks: # new in 1.2
   Enabled: true
 Lint/NumberedParameterAssignment: # new in 1.9
@@ -92,8 +136,11 @@ Lint/UnexpectedBlockArity: # new in 1.5
   Enabled: true
 Lint/UnmodifiedReduceAccumulator: # new in 1.1
   Enabled: true
+
 Style/ArgumentsForwarding: # new in 1.1
   Enabled: true
+Style/AsciiComments:
+  Enabled: false
 Style/CollectionCompact: # new in 1.2
   Enabled: true
 Style/DocumentDynamicEvalDefinition: # new in 1.1
@@ -124,3 +171,8 @@ Style/StringChars: # new in 1.12
   Enabled: true
 Style/SwapValues: # new in 1.1
   Enabled: true
+
+Style/DocumentationMethod:
+  Enabled: true
+  Exclude:
+    - 'db/migrate/**/*'
