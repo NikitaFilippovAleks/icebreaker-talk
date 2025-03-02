@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :collections, only: %i[index]
+      resources :collections, only: %i[index show create]
     end
   end
 end
@@ -19,6 +19,8 @@ end
 #                                 rswag_ui      /api-docs                                                                                         Rswag::Ui::Engine
 #                                rswag_api      /api-docs                                                                                         Rswag::Api::Engine
 #                       api_v1_collections GET  /api/v1/collections(.:format)                                                                     api/v1/collections#index
+#                                          POST /api/v1/collections(.:format)                                                                     api/v1/collections#create
+#                        api_v1_collection GET  /api/v1/collections/:id(.:format)                                                                 api/v1/collections#show
 #            rails_postmark_inbound_emails POST /rails/action_mailbox/postmark/inbound_emails(.:format)                                           action_mailbox/ingresses/postmark/inbound_emails#create
 #               rails_relay_inbound_emails POST /rails/action_mailbox/relay/inbound_emails(.:format)                                              action_mailbox/ingresses/relay/inbound_emails#create
 #            rails_sendgrid_inbound_emails POST /rails/action_mailbox/sendgrid/inbound_emails(.:format)                                           action_mailbox/ingresses/sendgrid/inbound_emails#create

@@ -13,4 +13,15 @@ class CollectionPresenter < ApplicationPresenter
       questions_count: questions.count
     }
   end
+
+  def detailed
+    {
+      id:,
+      name:,
+      color:,
+      description:,
+      questions_count: questions.count,
+      questons: questions
+    }
+  end
 end

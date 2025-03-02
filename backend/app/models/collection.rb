@@ -4,6 +4,8 @@
 class Collection < ApplicationRecord
   has_many :questions, dependent: :destroy
 
+  accepts_nested_attributes_for :questions
+
   validates :name, presence: true, uniqueness: true
   validates :color, presence: true, uniqueness: true
   validates :description, presence: true
