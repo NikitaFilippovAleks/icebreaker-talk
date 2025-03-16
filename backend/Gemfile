@@ -45,6 +45,10 @@ gem 'rubocop-rspec_rails', require: false
 # Pagination
 gem 'pagy'
 
+# Auth
+gem 'jwt'
+gem 'bcrypt'
+
 group :development, :test do
   gem 'byebug'
   gem 'factory_bot_rails'

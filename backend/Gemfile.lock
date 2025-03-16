@@ -79,6 +79,7 @@ GEM
     ast (2.4.2)
     backport (1.2.0)
     base64 (0.2.0)
+    bcrypt (3.1.20)
     benchmark (0.3.0)
     bigdecimal (3.1.8)
     bootsnap (1.18.4)
@@ -119,6 +120,8 @@ GEM
     json_tagged_logger (0.7.0)
       actionpack (>= 6.1)
       activesupport (>= 6.1)
+    jwt (2.10.1)
+      base64
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -349,12 +352,14 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  bcrypt
   bootsnap
   byebug
   config
   factory_bot_rails
   faker
   json_tagged_logger
+  jwt
   lograge
   pagy
   parallel_tests
