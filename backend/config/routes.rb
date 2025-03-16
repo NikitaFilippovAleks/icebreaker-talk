@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       get "users/show"
       post '/login', to: 'sessions#login'
       delete '/logout', to: 'sessions#logout'
+      post '/refresh_token', to: 'tokens#refresh_token'
       resources :collections, only: %i[index show create]
     end
   end
