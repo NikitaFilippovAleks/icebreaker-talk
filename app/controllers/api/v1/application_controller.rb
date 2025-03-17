@@ -18,6 +18,10 @@ class Api::V1::ApplicationController < ApplicationController
   private
 
   def header_token
-    request.headers['Authorization'].split(' ').last
+    auth_header = request.headers['Authorization']
+
+    if auth_header
+      auth_header.split(' ').last
+    end
   end
 end

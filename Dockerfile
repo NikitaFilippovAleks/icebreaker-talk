@@ -2,8 +2,8 @@ FROM ruby:3.3.4
 
 WORKDIR /app
 
-COPY ./backend/Gemfile ./backend/Gemfile.lock ./backend/
+COPY ./Gemfile ./Gemfile.lock ./
 
-RUN cd backend && bundle check || bundle install --jobs 4
+RUN bundle check || bundle install --jobs 4
 
 COPY . .

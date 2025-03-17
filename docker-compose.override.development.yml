@@ -1,12 +1,9 @@
 services:
   backend:
-    entrypoint: sh ./backend/docker-entrypoint-development.sh
+    entrypoint: sh ./docker-entrypoint-development.sh
     volumes:
       - .:/app:cached
       - solargraph:/root/.solargraph
-  client:
-    volumes:
-      - .:/app:cached
   db:
     ports:
       - 5432:5432

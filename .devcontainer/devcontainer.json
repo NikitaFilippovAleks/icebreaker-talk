@@ -1,6 +1,6 @@
 {
   "name": "Backend",
-  "dockerComposeFile": ["../../docker-compose.yml", "../../docker-compose.override.development.yml"],
+  "dockerComposeFile": ["../docker-compose.yml", "../docker-compose.override.development.yml"],
   "service": "backend",
   "workspaceFolder": "/app",
   "shutdownAction": "stopCompose",

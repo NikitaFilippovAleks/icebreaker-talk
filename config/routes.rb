@@ -23,10 +23,10 @@ end
 #                                   Prefix Verb   URI Pattern                                                                                       Controller#Action
 #                                 rswag_ui        /api-docs                                                                                         Rswag::Ui::Engine
 #                                rswag_api        /api-docs                                                                                         Rswag::Api::Engine
-#                      api_v1_users_create GET    /api/v1/users/create(.:format)                                                                    api/v1/users#create
 #                        api_v1_users_show GET    /api/v1/users/show(.:format)                                                                      api/v1/users#show
 #                             api_v1_login POST   /api/v1/login(.:format)                                                                           api/v1/sessions#login
 #                            api_v1_logout DELETE /api/v1/logout(.:format)                                                                          api/v1/sessions#logout
+#                     api_v1_refresh_token POST   /api/v1/refresh_token(.:format)                                                                   api/v1/tokens#refresh_token
 #                       api_v1_collections GET    /api/v1/collections(.:format)                                                                     api/v1/collections#index
 #                                          POST   /api/v1/collections(.:format)                                                                     api/v1/collections#create
 #                        api_v1_collection GET    /api/v1/collections/:id(.:format)                                                                 api/v1/collections#show
