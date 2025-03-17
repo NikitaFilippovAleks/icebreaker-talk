@@ -2,8 +2,6 @@
 
 set -e
 
-cd backend
-
 bundle install
 rails db:create db:migrate
 
